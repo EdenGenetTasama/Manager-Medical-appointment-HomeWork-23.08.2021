@@ -54,14 +54,17 @@ const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 const searchPara=document.getElementById("searchPara");
 
+var counterTwo=0;
+
 searchButton.onclick = function () {
   for (let i = 0; i < objectOfPeople.length; i++)
     if (objectOfPeople[i].name ==searchInput.value  ) {
         searchPara.innerHTML = "שם הפרטי שמילאת קיים תחת ת.ז : "+objectOfPeople[i].id ;
+        counterTwo++
     }
-   else{
-        alert("שם עמית לא קיים במערכת")}
-    
+   if (counterTwo == 0){
+     alert("תז ")
+   }
 };
 
 const searchInputID = document.getElementById("searchInputID");
